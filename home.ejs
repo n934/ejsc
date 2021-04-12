@@ -1,0 +1,10 @@
+<%include partials/header%>
+<h1>Home</h1>
+<p> <%=homePara%> </p>
+<%newposts.forEach(function(post){%>
+<h1><%=(post.title)%></h1>
+<p><%=(post.body.substr(1,100) +" ....")%></p>
+ <a href="/post/<%=post.title%>">Read More</a> 
+<%});%>
+
+<%include partials/footer%>
